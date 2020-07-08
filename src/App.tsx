@@ -25,6 +25,7 @@ export class App extends PureComponent<IProps, IState>{
     super(props)
     const { store, persistor } = configureStore(this.onStoreCreated)
     this.store = store
+    console.log('Store', store.getState())
     this.persistor = persistor
   }
 

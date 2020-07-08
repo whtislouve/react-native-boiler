@@ -1,28 +1,14 @@
-import {ReducerBuilder, reducerWithInitialState} from 'typescript-fsa-reducers'
-import {EListLanguage} from 'app/system/helpers'
-import {actionCreatorFactory } from 'typescript-fsa'
-
-const systemFactory = actionCreatorFactory('SYSTEM')
-export const action = systemFactory<EListLanguage>('TEST')
+import { ReducerBuilder, reducerWithInitialState } from 'typescript-fsa-reducers'
+import { EListLanguage } from 'app/system/helpers'
+import { ISystemState, SystemInitialState } from 'app/system/redux/system/systemState'
+import { SystemAction } from 'app/system/redux/system/systemAction'
 
 const setLanguage = (state: ISystemState, payload: EListLanguage): ISystemState => {
   return {
     ...state,
-    language: EListLanguage.ru
+    language: payload,
   }
 }
 
-// class SystemAction {
-//   static setLanguage = actionCreator<EListLanguage>('SYSTEM/SET_LANGUAGE')
-// }
-
-export interface ISystemState {
-  language: EListLanguage
-}
-
-export const SystemInitialState: ISystemState = {
-  language: EListLanguage.ru,
-}
-
 export const systemReducer: ReducerBuilder<ISystemState> = reducerWithInitialState(SystemInitialState)
- .case(action, setLanguage)
+  .case(SystemAction.setLanguage, setLanguage)

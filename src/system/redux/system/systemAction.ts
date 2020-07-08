@@ -1,6 +1,6 @@
-import { actionCreator } from 'app/system/redux'
+import { actionCreator } from 'app/system/redux/actionCreator'
 import { EListLanguage} from 'app/system/helpers'
-//
-// export class SystemAction {
-//   static setLanguage = actionCreator<EListLanguage>('SYSTEM/SET_LANGUAGE')
-// }
+
+export class SystemAction {
+  static setLanguage = actionCreator<EListLanguage>('SYSTEM/SET_LANGUAGE')
+}
