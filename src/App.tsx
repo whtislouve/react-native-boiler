@@ -9,6 +9,12 @@ import { configureStore, IApplicationState } from 'app/system/redux'
 import { Loader } from 'app/system/view/Loader'
 import { localization } from 'app/system/localization'
 
+console.ignoredYellowBox = [
+  'Remote debugger',
+  'Warning: isMounted… is deprecated',
+  'Module RCTImageLoader'
+]
+
 interface IProps {
 
 }
@@ -43,7 +49,7 @@ export class App extends PureComponent<IProps, IState>{
   render(): JSX.Element {
     return (
      <PersistGate
-       loading={this.renderLoader}
+       loading={this.renderLoader()}
        persistor={this.persistor}
      >
         <Provider store={this.store}>
