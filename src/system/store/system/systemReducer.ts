@@ -1,7 +1,7 @@
 import { ReducerBuilder, reducerWithInitialState } from 'typescript-fsa-reducers'
 import { EListLanguage } from 'app/system/helpers'
-import { ISystemState, SystemInitialState } from 'app/system/redux/system/systemState'
-import { SystemAction } from 'app/system/redux/system/systemAction'
+import { ISystemState, SystemInitialState } from 'app/system/store/system/systemState'
+import { SystemAction } from 'app/system/store/system/systemAction'
 
 const setLanguage = (state: ISystemState, payload: EListLanguage): ISystemState => {
   return {

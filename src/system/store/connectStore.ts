@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { IApplicationState } from 'app/system/redux'
+import { IApplicationState } from 'app/system/store'
 import { Dispatch } from 'redux'
 
 export const connectStore = <StateProps, DispatchProps>(

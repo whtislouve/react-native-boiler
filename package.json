@@ -7,7 +7,11 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "clean": "(cd andoroid && ./gradlew clean)",
-    "release": "(cd android && ./gradlew app:assembleRelease",
+    "release": "(cd android && ./gradlew app:assembleRelease)",
+    "all": "yarn install && (cd ios && pod install)",
+    "podinstall": "(cd ios && pod install)",
+    "reinstall": "rm -rf ./node_modules && yarn install  && (cd ios rm -rf ./Pods && pod install)",
+    "tsw": "yarn run tsc --watch",
     "test": "jest"
   },
   "dependencies": {

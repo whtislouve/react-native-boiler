@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import { Persistor } from 'redux-persist'
 import { Store } from 'redux'
 import { PersistGate } from 'redux-persist/integration/react'
-import { configureStore, IApplicationState } from 'app/system/redux'
+import { configureStore, IApplicationState } from 'app/system/store'
 import { Loader } from 'app/system/view/Loader'
 import { localization } from 'app/system/localization'
 
@@ -31,7 +31,6 @@ export class App extends PureComponent<IProps, IState>{
     super(props)
     const { store, persistor } = configureStore(this.onStoreCreated)
     this.store = store
-    console.log('Store', store.getState())
     this.persistor = persistor
   }
 

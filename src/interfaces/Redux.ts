@@ -1,4 +1,4 @@
-interface IPayload<T> {
+interface IAsyncPayload<T> {
   params: undefined
   result: T
 }
