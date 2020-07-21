@@ -3,7 +3,6 @@ import {
   View,
   Image,
   Text,
-  SafeAreaView,
   TouchableOpacity,
   Switch,
   TextInput,
@@ -16,6 +15,7 @@ import {
   ImageRepository,
   fonts,
 } from 'app/system/helpers'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 interface IProps {
 
@@ -38,7 +38,7 @@ export class Login extends PureComponent<IProps,IState> {
   render(): JSX.Element {
 
     return (
-      <SafeAreaView style={styles.container}>
+      <KeyboardAwareScrollView contentContainerStyle={styles.container}>
 {/*        <Image
           source={ImageRepository.loginLogoApplication}
           style={styles.logo}
@@ -114,7 +114,7 @@ export class Login extends PureComponent<IProps,IState> {
             </Text>
           </Text>
         </View>
-      </SafeAreaView>
+      </KeyboardAwareScrollView>
     )
   }
 }
