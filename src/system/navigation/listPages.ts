@@ -1,3 +1,3 @@
 export class ListPages {
-  static readonly home = 'Home'
+  static readonly Login = 'Login'
 }

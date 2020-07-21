@@ -1,3 +1,5 @@
 export const fonts = {
-    nameFont: 'nameFont'
+    geometriaLight: 'Geometria-Light',
+    geometriaBold: 'Geometria-Bold',
+    openSansRegular: 'OpenSans-Regular',
 }

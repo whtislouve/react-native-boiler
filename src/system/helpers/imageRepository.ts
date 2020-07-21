@@ -1,5 +1,5 @@
-//import { ImageURISource } from 'react-native'
-
 export class ImageRepository {
-  //   static readonly example: ImageURISource = require('path')
+  static readonly loginLogoApplication = require('assets/images/login/logo.png')
+  static readonly logoDottedLine = require('assets/images/login/dotted_line.png')
+  static readonly logoQuestion = require('assets/images/login/question.png')
 }
