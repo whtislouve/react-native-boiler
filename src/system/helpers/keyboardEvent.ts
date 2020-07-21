@@ -1,5 +1,5 @@
 import { KeyboardEventName } from 'react-native'
-import { platform } from './platfrom'
+import { platform } from './platform'
 
 export const keyboardHideEvent: KeyboardEventName =
   platform.is.ios

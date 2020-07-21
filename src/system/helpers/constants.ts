@@ -5,6 +5,7 @@ export enum EPlatformName {
 
 export enum EListLanguage {
   ru = 'ru',
+  en = 'en',
 }
 
 export enum EStatusBarStyle {

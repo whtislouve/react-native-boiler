@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import { View, Text } from 'react-native'
 import { styleSheetCreate, style } from 'app/system/helpers'
+import { localization } from 'app/system/localization'
 
 export class Home extends PureComponent{
 
@@ -8,7 +9,7 @@ export class Home extends PureComponent{
     return (
       <View style={styles.container}>
         <Text>
-          Home
+          {localization.list.pleaseWait}
         </Text>
       </View>
     )
