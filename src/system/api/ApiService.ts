@@ -6,7 +6,7 @@ export const ApiService = axios.create({
 })
 
 ApiService.interceptors.response.use((response: AxiosResponse) => {
-  if (response.status >= 200 && response.status <= 400) {
+  if (response.status >= 200 && response.status < 400) {
     return response.data
   }
 })

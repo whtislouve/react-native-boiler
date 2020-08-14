@@ -2,10 +2,10 @@ import { KeyboardEventName } from 'react-native'
 import { platform } from './platform'
 
 export const keyboardHideEvent: KeyboardEventName =
-  platform.is.ios
+  platform.isIos
     ? 'keyboardWillHide'
     : 'keyboardDidHide'
 export const keyboardShowEvent: KeyboardEventName =
-  platform.is.ios
+  platform.isIos
     ? 'keyboardWillShow'
     : 'keyboardDidShow'
