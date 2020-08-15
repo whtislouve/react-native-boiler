@@ -1,14 +1,16 @@
-import axios, { AxiosResponse } from 'axios'
+import axios, { AxiosResponse, AxiosError } from 'axios'
 import { baseUrl } from 'app/system/helpers'
 
 export const ApiService = axios.create({
   baseURL: baseUrl,
 })
 
-ApiService.interceptors.response.use((response: AxiosResponse) => {
-  if (response.status >= 200 && response.status < 300) {
+ApiService.interceptors.response.use(
+  (response: AxiosResponse) => {
+   // console.log(response)
     return response.data
-  } else {
-    
+  },
+  (error: AxiosError) => {
+    console.log(error)
   }
-})
+)

@@ -1,2 +1,2 @@
-export * from './rootNavigation'
+// export * from './rootNavigation'
 export * from './listPages'
