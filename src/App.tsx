@@ -10,10 +10,7 @@ import { configureStore, IApplicationState } from 'app/system/store'
 import { Loader } from 'app/module/global/view/Loader'
 import { localization } from 'app/system/localization'
 
-YellowBox.ignoreWarnings([
-  'Remote debugger',
-  'Require cycles are allowed'
-])
+YellowBox.ignoreWarnings(['Remote debugger'])
 
 interface IProps {
 
