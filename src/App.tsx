@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { AppState, AppStateStatus, } from 'react-native'
+import { AppState, AppStateStatus, YellowBox, } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { RootNavigator } from 'app/system/navigation'
 import { Provider } from 'react-redux'
@@ -10,11 +10,10 @@ import { configureStore, IApplicationState } from 'app/system/store'
 import { Loader } from 'app/module/global/view/Loader'
 import { localization } from 'app/system/localization'
 
-console.ignoredYellowBox = [
+YellowBox.ignoreWarnings([
   'Remote debugger',
-  'Warning: isMounted… is deprecated',
-  'Module RCTImageLoader'
-]
+  'Require cycles are allowed'
+])
 
 interface IProps {
 

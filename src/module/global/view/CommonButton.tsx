@@ -1,5 +1,9 @@
 import React, { PureComponent } from 'react'
-import { Text, TouchableOpacity, TouchableOpacityProps, } from 'react-native'
+import { 
+  Text,
+  TouchableOpacity, 
+  TouchableOpacityProps, 
+} from 'react-native'
 import {
   styleSheetCreate,
   style,

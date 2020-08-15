@@ -1,5 +1,9 @@
 import React, { PureComponent } from 'react'
-import { View, TextInput, TextInputProps, } from 'react-native'
+import {
+   View, 
+   TextInput, 
+   TextInputProps, 
+} from 'react-native'
 import {
   styleSheetCreate,
   style,
