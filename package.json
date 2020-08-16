@@ -1,5 +1,5 @@
 {
-  "name": "HelloWorld",
+  "name": "boiler",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,11 +7,13 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "clean": "(cd andoroid && ./gradlew clean)",
-    "release": "(cd android && ./gradlew app:assembleRelease)",
+    "release": "(cd android && ./gradlew app:assembleRelease) && yarn renameAndroid",
     "all": "yarn install && (cd ios && pod install)",
     "podinstall": "(cd ios && pod install)",
     "reinstall": "rm -rf ./node_modules && yarn install  && (cd ios rm -rf ./Pods && pod install)",
     "tsw": "yarn run tsc --watch",
+    "renameAndroid": "chmod u=rwx ./renameReleaseAndroidApk.bash && ./renameReleaseAndroidApk.bash",
+    "fixWebView": "chmod 777 removeWebView.sh && sudo ./removeWebView.sh",
     "test": "jest"
   },
   "dependencies": {
