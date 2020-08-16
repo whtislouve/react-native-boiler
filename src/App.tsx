@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import { AppState, AppStateStatus, YellowBox, } from 'react-native'
-import { NavigationContainer } from '@react-navigation/native'
+import { NavigationContainer, NavigationContainerRef } from '@react-navigation/native'
 import { RootNavigator } from 'app/system/navigation/rootNavigation'
 import { Provider } from 'react-redux'
 import { Persistor } from 'redux-persist'
@@ -24,6 +24,7 @@ interface IState {
 export class App extends PureComponent<IProps, IState>{
   private readonly store: Store
   private readonly persistor: Persistor
+  private navigatorRef: any
 
   constructor(props: IProps) {
     super(props)
@@ -51,6 +52,10 @@ export class App extends PureComponent<IProps, IState>{
     this.setState({ appStatus: nextAppStatus })
   }
 
+  setNavigatorRef = (navigatorRef: NavigationContainerRef): void => {
+    this.navigatorRef = navigatorRef
+  }
+
   onStoreCreated = (): void => {
     const state: IApplicationState = this.store.getState()
     localization.list.setLanguage(state.system.language)
@@ -69,7 +74,7 @@ export class App extends PureComponent<IProps, IState>{
        persistor={this.persistor}
      >
         <Provider store={this.store}>
-          <NavigationContainer>
+          <NavigationContainer ref={this.setNavigatorRef}>
             <RootNavigator />
           </NavigationContainer>
         </Provider>
