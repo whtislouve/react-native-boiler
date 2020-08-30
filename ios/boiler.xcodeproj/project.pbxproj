@@ -20,9 +20,6 @@
 		8C8A8EC1D23A3FFD61B312EE /* libPods-boiler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D62CD6230B08CC37759979 /* libPods-boiler-tvOS.a */; };
 		BFDA70F165EB13D6380AC56B /* libPods-boiler-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CCB6843501F8DA2F4A1258 /* libPods-boiler-tvOSTests.a */; };
 		DC04F903E773C7908A98ED2F /* libPods-boiler-boilerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7430CA48B4F22F2063E51FE9 /* libPods-boiler-boilerTests.a */; };
-		3F3A70258A4F47C18D67C87E /* Geometria-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F66AC69AA28440A98B6D331 /* Geometria-Light.ttf */; };
-		A9C0B4DBC3D24160A3460C1B /* Geometria-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A84E813FF534B2792222D39 /* Geometria-Bold.ttf */; };
-		85B5CFD2D0664A249542732B /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA1F81DF76D94098901BEFD5 /* OpenSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,9 +67,6 @@
 		DF16C057BFD09491A13ACDF2 /* Pods-boiler-boilerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boiler-boilerTests.debug.xcconfig"; path = "Target Support Files/Pods-boiler-boilerTests/Pods-boiler-boilerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		7F66AC69AA28440A98B6D331 /* Geometria-Light.ttf */ = {isa = PBXFileReference; name = "Geometria-Light.ttf"; path = "../assets/fonts/Geometria-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2A84E813FF534B2792222D39 /* Geometria-Bold.ttf */ = {isa = PBXFileReference; name = "Geometria-Bold.ttf"; path = "../assets/fonts/Geometria-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FA1F81DF76D94098901BEFD5 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; name = "OpenSans-Regular.ttf"; path = "../assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +149,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		70864B4612C7410DA6A15C09 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,20 +202,8 @@
 				83D1F48AC5DAE562F9682494 /* Pods-boiler-tvOSTests.debug.xcconfig */,
 				46B248627CE4446810176BE0 /* Pods-boiler-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		70864B4612C7410DA6A15C09 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				7F66AC69AA28440A98B6D331 /* Geometria-Light.ttf */,
-				2A84E813FF534B2792222D39 /* Geometria-Bold.ttf */,
-				FA1F81DF76D94098901BEFD5 /* OpenSans-Regular.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -358,9 +347,6 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				3F3A70258A4F47C18D67C87E /* Geometria-Light.ttf in Resources */,
-				A9C0B4DBC3D24160A3460C1B /* Geometria-Bold.ttf in Resources */,
-				85B5CFD2D0664A249542732B /* OpenSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
