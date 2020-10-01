@@ -46,7 +46,7 @@ export class App extends PureComponent<IProps, IState>{
   }
 
   handleAppStateChange = (nextAppStatus: AppStateStatus): void => {
-    if (this.state.appStatus.match(/inactive|background/) && status === 'active' ) {
+    if (this.state.appStatus.match(/inactive|background/) && nextAppStatus === 'active' ) {
      
     }
     this.setState({ appStatus: nextAppStatus })
