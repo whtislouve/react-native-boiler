@@ -7,5 +7,9 @@ export class StringHelper {
   static findLastMatchTakeSubstring = (string: string, searchString: string) => {
     return string.substring(string.lastIndexOf(searchString) + 1)
   }
+
+  static search = (value: string, searchValue: string) => {
+    return value.toLowerCase().includes(searchValue.toLowerCase())
+  }
   
 }
